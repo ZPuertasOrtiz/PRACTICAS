@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Zuleidis Puertas">
+    <title>Mokepon! 💧🔥🌱</title>     <!-- Estatico, no cambia con el tiempo -->
+    <script src="mokeponjs/mokepondin.js" defer> </script>
+</head>
+<body title="Copyright free game">
+    <h1>MOKEPON!</h1>
+
+    <section id="pet-select"> <!--id como identificador-->
+        <h2>Choose your pet:</h2>
+        <label for="hipodoge"> Hipodoge</label>
+        <input type="radio" name="pet" id="hipodoge"/>
+
+        <label for="capipepo"> Capipepo</label>
+        <input type="radio" name="pet" id="capipepo"/> 
+
+        <label for="ratigueya"> Ratigueya</label>
+        <input type="radio" name="pet" id="ratigueya"/> 
+
+        <button id="button_pet"> Choose </button>
+    </section> 
+
+    <section id="attack-select">
+     <h2>Choose your attack:</h2>
+        <p> Your pet <span id="player_pet"> </span> has <span> x</span> vidas</p>      
+        <p> Your enemy's pet <span id="enemy_pet"> </span> has <span> x</span> vidas</p>
+
+        <p> 
+            <button id="button_fire"> Fire🔥</button>
+            <button id="button_earth"> Earth🌱</button>
+            <button id="button_water"> Water💧</button>
+        </p>
+    </section>
+
+    <section id="messages">
+        <p>Your pet attacked...</p>
+
+    </section>
+
+    <section id="restart">
+        <button id="button_restart"> Restart </button>
+    </section>
+    
+    
+    
+</body>
+</html>
