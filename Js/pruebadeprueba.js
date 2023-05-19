@@ -25,8 +25,8 @@ function cadenaDeTexto(str){
     console.log(newStr)
     let suma =0;
     for (let i=0; i<newStr.length; i++){
-    
-        if (numeros[newStr[i]]){
+       
+        if (newStr[i] in numeros){
             let valor =numeros[newStr[i]];
             suma+=valor;
         }
@@ -36,4 +36,4 @@ function cadenaDeTexto(str){
     return suma;
 }
 
-cadenaDeTexto("uno dos tres uno")
+cadenaDeTexto("uno zero tres uno")
