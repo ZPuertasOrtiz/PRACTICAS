@@ -1,12 +1,13 @@
 //PLAYER PET SELECTION FUNCTION
-const playerPetSelection = ()=> { 
-    let spanPlayerPet = document.getElementById("player_pet");
+
+const playerCandidateSelection = ()=> { 
+    let spanPlayerCandidate = document.getElementById("player_candidate");
    
 
-    document.getElementById("hipodoge").checked ? spanPlayerPet.innerHTML="Hipodoge":
-    document.getElementById("capipepo").checked ? spanPlayerPet.innerHTML="Capipero":
-    document.getElementById("ratigueya").checked ? spanPlayerPet.innerHTML="Ratigueya":
-    alert("Choose a pet"); 
+    document.getElementById("Pao").checked ? spanPlayerCandidate.innerHTML="Pao":
+    document.getElementById("Zule").checked ? spanPlayerCandidate.innerHTML="Zule":
+    document.getElementById("Angie").checked ? spanPlayerCandidate.innerHTML="Angie":
+    alert("Choose a candidate"); 
 
     randomEnemy();
 
@@ -17,18 +18,89 @@ const randomNumber = (min,max)=> Math.ceil(Math.random()*(max-min+1));
 
 //RANDOM ENEMY SELECTOR FUNCTION
 const randomEnemy = () => {
-    let randomAttack = randomNumber(1,3);
-    let spanEnemyPet = document.getElementById("enemy_pet");
+    let randomEnemy = randomNumber(1,3);
+    let spanEnemyCandidate = document.getElementById("enemy_candidate");
 
-    randomAttack == 1? spanEnemyPet.innerHTML = "Hipodoge":
-    randomAttack == 2? spanEnemyPet.innerHTML = "Capipepo":
-    spanEnemyPet.innerHTML = "Ratigueya";
+    randomEnemy == 1? spanEnemyCandidate.innerHTML = "JS":
+    randomEnemy == 2? spanEnemyCandidate.innerHTML = "Python":
+    spanEnemyCandidate.innerHTML = "Binarios";
 }
 
-    
+//ATTACK FUNTIONS
+const fireAttack = ()=> {
+    playerAttack = "🔥";
+    attackNumber =1;
+    enemyRandomAttack();
+} 
+
+const waterAttack = ()=> {
+    playerAttack = "💧";
+    attackNumber =2;
+    enemyRandomAttack();
+}
+
+const earthAttack = ()=> {
+    playerAttack = "🌱";
+    attackNumber =3;
+    enemyRandomAttack();
+} 
 
 
-let buttonPet = document.getElementById("button_pet");
-buttonPet.addEventListener("click", playerPetSelection ) 
+
+const enemyRandomAttack = ()=>{
+    randomAttack = randomNumber(1,3);
+    randomAttack == 1? enemyAttack="🔥":
+    randomAttack == 2? enemyAttack = "💧":
+    enemyAttack = "🌱";
+
+    combate();
+
+}
+
+function combate (user1,user2){
+    let resta = attackNumber - randomAttack;
+    console.log(resta)
+    resta == 0? message = "It's a tie":
+    resta == 1 || resta == -2 ? message = "You won!":message = "You Lost";
+
+    createMessage();
+} 
+ 
+
+//CREANDO EL MENSAJE
+
+const createMessage = ()=>{
+   let sectionMessage =document.getElementById("messages")
+
+   let pharagraph = document.createElement('p');
+   pharagraph.innerHTML = `Your candidate attacked with ${playerAttack}, and the enemy attack was ${enemyAttack}.${message} `
+
+   sectionMessage.appendChild(pharagraph);
+}
+
+ 
+
+
+let buttonCandidate = document.getElementById("button_candidate");
+buttonCandidate.addEventListener("click", playerCandidateSelection );
+
+//Botones de Acción del juego
+let playerAttack;
+let enemyAttack;
+let attackNumber;
+let message="";
+let randomAttack;
+
+let buttonFire = document.getElementById("button_fire");
+buttonFire.addEventListener("click",fireAttack);
+
+let buttonWater = document.getElementById("button_water" );
+buttonWater.addEventListener("click",waterAttack);
+
+let buttonEarth = document.getElementById("button_earth");
+buttonEarth.addEventListener("click",earthAttack);
+
+
+
 
 // window.addEventListener("load", startGame) (Otra forma, mejor usar defer)
