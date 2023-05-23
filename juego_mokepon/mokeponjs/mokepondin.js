@@ -4,9 +4,9 @@ const playerCandidateSelection = ()=> {
     let spanPlayerCandidate = document.getElementById("player_candidate");
    
 
-    document.getElementById("Pao").checked ? spanPlayerCandidate.innerHTML="Pao":
+    document.getElementById("Pao").checked ? spanPlayerCandidate.innerHTML="Zulo":
     document.getElementById("Zule").checked ? spanPlayerCandidate.innerHTML="Zule":
-    document.getElementById("Angie").checked ? spanPlayerCandidate.innerHTML="Angie":
+    document.getElementById("Angie").checked ? spanPlayerCandidate.innerHTML="Zuli":
     alert("Choose a candidate"); 
 
     randomEnemy();
@@ -58,10 +58,13 @@ const enemyRandomAttack = ()=>{
 }
 
 function combate (user1,user2){
+    let spanPlayerLifes = document.getElementById("player_lifes");
+    let spanEnemyLifes = document.getElementById("enemy_lifes");
+
     let resta = attackNumber - randomAttack;
     console.log(resta)
     resta == 0? message = "It's a tie":
-    resta == 1 || resta == -2 ? message = "You won!":message = "You Lost";
+    resta == 1 || resta == -2 ? (message = "You won!", enemyLifes--, spanEnemyLifes.innerHTML=enemyLifes):(message = "You Lost",playerLifes--, spanPlayerLifes.innerHTML=playerLifes);
 
     createMessage();
 } 
@@ -90,6 +93,8 @@ let enemyAttack;
 let attackNumber;
 let message="";
 let randomAttack;
+let playerLifes =3;
+let enemyLifes =3;
 
 let buttonFire = document.getElementById("button_fire");
 buttonFire.addEventListener("click",fireAttack);
