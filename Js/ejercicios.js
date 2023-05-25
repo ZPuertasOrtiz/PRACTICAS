@@ -109,3 +109,23 @@
 
 //EJERCICIO 5
 
+
+//EJERCICIO 11
+
+// const pattern = (n)=>{
+//     let ast ="*";
+//     let space = " ";
+//     let diamond =[]
+//         for (let i=1; i<=n;i++ ){ 
+//          console.log(space.repeat(n-i)+ast.repeat(2*i-1))
+//         }
+//          for (let j=n-1; j>0;j--){
+//         console.log(space.repeat(n-j)+ast.repeat(2*j-1))
+//          }  
+      
+//     }
+    
+//     pattern(2)
+
+// //FIN------------------------------------------------------------------------------------------
+
