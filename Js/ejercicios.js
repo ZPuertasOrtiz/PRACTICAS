@@ -109,23 +109,83 @@
 
 //EJERCICIO 5
 
+// const invertirDigitos = (n) => {
+//   return n.toString().split("").map(Number).reverse() 
+// }
+
+// console.log(invertirDigitos(-4263))
+
+
+// //FIN------------------------------------------------------------------------------------------
+
+//EJERCICIO 6
+// const invertirDigitosNegativos = (n) => {
+//     let abs = Math.abs(n);
+//     return abs.toString().split("").map(Number).reverse() 
+// }
+
+// console.log(invertirDigitosNegativos(-4263))
+
+// //FIN------------------------------------------------------------------------------------------
+
+//EJERCICIO 7
+
+
+// const contarLetra = (str)=>{
+//     let counter =0;
+//     for (let i=0; i<str.length; i++){
+//         str[i].toUpperCase()=="A"? counter++ : "";
+//     }
+//     return counter;
+// }
+// console.log(contarLetra("anaranjado"));
+// console.log(contarLetra("Algoritmos y programación"));
+// //FIN------------------------------------------------------------------------------------------
+
+//EJERCICIO 8
+
+// const contarLetraA = (str,character) => {
+//     let counter =0
+//     switch (character){
+//         case "A":
+//             for (let i=0; i<str.length; i++){
+//                 str[i] =="A"? counter++ : "";
+//             }
+//         break;
+//         case "a":
+//             for (let i=0; i<str.length; i++){
+//                 str[i] =="a"? counter++ : "";
+//             }
+//         break;
+//         default: counter =0;
+//     }
+
+//     return counter;
+// }
+// console.log(contarLetraA("Algoritmos y programación","A"));
+
+//EJERCICIO 9
+
+
+
+
 
 //EJERCICIO 11
 
 // const pattern = (n)=>{
 //     let ast ="*";
 //     let space = " ";
-//     let diamond =[]
-//         for (let i=1; i<=n;i++ ){ 
-//          console.log(space.repeat(n-i)+ast.repeat(2*i-1))
-//         }
-//          for (let j=n-1; j>0;j--){
-//         console.log(space.repeat(n-j)+ast.repeat(2*j-1))
-//          }  
-      
-//     }
     
-//     pattern(2)
+//     for (let i=1; i<=n;i++ ){ 
+//          console.log(space.repeat(n-i)+ast.repeat(2*i-1))
+//     }
+//     for (let j=n-1; j>0;j--){
+//         console.log(space.repeat(n-j)+ast.repeat(2*j-1))
+//     }  
+      
+// }
+    
+// pattern(2)
 
 // //FIN------------------------------------------------------------------------------------------
 
