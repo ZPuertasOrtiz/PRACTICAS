@@ -1,8 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+
+body {
+    font-family: 'Oswald', sans-serif;
+    background-color: black;
+
+}
+
 #head {
  color:white;
- width: 244px;
- height: 50px;
- background-color: #283747  ;
 
 }
 
@@ -11,4 +16,32 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.subtitle{
+    color:white;
+}
+
+.cards{
+   display: flex; 
+}
+.mokepon-card{
+    width: 160px;
+    height: 100px;
+    background: lightsteelblue;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 10px;
+    border: 1px solid blue ;
+    display: flex;
+    color: white;
+    justify-content: center;
+}
+
+.mokepon-card img {
+   width: 80px; 
+}
+
+input{
+    display: none;
 }
