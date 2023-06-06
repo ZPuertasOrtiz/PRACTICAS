@@ -214,20 +214,20 @@
 
 //EJERCICIO 11
 
-const pattern = (n)=>{
-    let ast ="*";
-    let space = " ";
+// const pattern = (n)=>{
+//     let ast ="*";
+//     let space = " ";
     
-    for (let i=1; i<=n;i++ ){ 
-         console.log(space.repeat(n-i)+ast.repeat(2*i-1)+space.repeat(n-i))
-    }
-    for (let j=n-1; j>0;j--){
-        console.log(space.repeat(n-j)+ast.repeat(2*j-1)+space.repeat(n-j))
-    }  
+//     for (let i=1; i<=n;i++ ){ 
+//          console.log(space.repeat(n-i)+ast.repeat(2*i-1)+space.repeat(n-i))
+//     }
+//     for (let j=n-1; j>0;j--){
+//         console.log(space.repeat(n-j)+ast.repeat(2*j-1)+space.repeat(n-j))
+//     }  
       
-}
+// }
     
-pattern(4)
+// pattern(4)
 
 // //FIN------------------------------------------------------------------------------------------
 
@@ -269,3 +269,6 @@ pattern(4)
  //EJERCICIO 14
 
 
+ const cadena = "¡Hola! ¿Cómo estás?";
+ const puntuacion = cadena.match(/[[:punct:]]/g);
+ console.log(puntuacion);
