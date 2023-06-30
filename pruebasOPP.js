@@ -19,16 +19,17 @@
 
 //   console.log(createNewPerson("Zule"))
 
-function Persona(nombre, apellido, edad, genero, intereses) {
+// function Persona(nombre, apellido, edad, genero, intereses) {
 
-    // definiendo de propiedades y métodos
-    this.first = first;
-    this.last = last;
-  //...
-  }
+//     // definiendo de propiedades y métodos
+//     this.first = first;
+//     this.last = last;
+//   //...
+//   }
 
-  //instancia
+//   //instancia
 
-let person1 = new Persona('Bob', 'Smith', 32, 'hombre', ['music', 'skiing']);
-person1.valueOf()
+// let person1 = new Persona('Bob', 'Smith', 32, 'hombre', ['music', 'skiing']);
+// person1.valueOf()
+
   

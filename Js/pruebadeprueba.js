@@ -16,27 +16,27 @@
 
 // devolvercuadrados(4,5,100,81,7,11)
 
-//sumar desde los números
-// function cadenaDeTexto(str){
-//     let newStr = str.split(" ");
-//     let numeros ={
-//         uno :1, "dos":2, "tres":3, "cuatro":4, "cinco":5, "seis":6, "siete":7, "ocho":8, "nueve":9,
-//     }
-//     console.log(newStr)
-//     let suma =0;
-//     for (let i=0; i<newStr.length; i++){
+// // sumar desde los números
+function cadenaDeTexto(str){
+    let newStr = str.split(" ");
+    let numeros ={
+        uno :1, "dos":2, "tres":3, "cuatro":4, "cinco":5, "seis":6, "siete":7, "ocho":8, "nueve":9,
+    }
+    console.log(newStr)
+    let suma =0;
+    for (let i=0; i<newStr.length; i++){
        
-//         if (newStr[i] in numeros){
-//             let valor =numeros[newStr[i]];
-//             suma+=valor;
-//         }
+        if (newStr[i] in numeros){
+            let valor =numeros[newStr[i]];
+            suma+=valor;
+        }
       
-//     }
-//     console.log(suma)
-//     return suma;
-// }
+    }
+    console.log(suma)
+    return suma;
+}
 
-// cadenaDeTexto("uno zero tres uno")
+cadenaDeTexto("cinco siete dos")
 
 // function digitos(num){
 //     let ast = "*";
@@ -52,4 +52,9 @@
 //     console.log(newArr)
 // }
 // digitos(3)
+
+// Dado un entero retorne un array de strings que cumpla el siguiente patrón: 
+
+//digitos(1)---> [ '***', '*Q*', '***' ]
+//digitos(3)--> [ '*****', '*QQQ*', '*QQQ*', '*QQQ*', '*****' ]
 
