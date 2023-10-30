@@ -1,5 +1,5 @@
 let profile = document.querySelector("#imageProfile");
-profile.setAttribute("src", "user.png");
+profile.setAttribute("src", "Profileuser.png");
 
 let botonApagado = document.querySelectorAll("i.bi.bi-circle");
 let botonEncendido = document.querySelectorAll("i.bi.bi-circle-fill");
@@ -10,7 +10,7 @@ let temaEstilo = colorDocumento.getAttribute('#href');
 let botonRedInactivo = document.querySelector(".colorRed i.bi.bi-circle");
 let botonRedActivo = document.querySelector(".colorRed i.bi.bi-circle-fill");
 function colorRed() {
-	let hojaEstilo = colorDocumento.getAttribute('#href');
+	let hojaEstilo = colorDocumento.getAttribute('href');
 	switch (hojaEstilo) {
 	case 'style.css':
 	colorDocumento.setAttribute('href','styleRed.css');
@@ -26,8 +26,8 @@ function colorRed() {
 	colorDocumento.setAttribute('href','styleRed.css');
 	botonRedInactivo.style.display = "none";
 	botonRedActivo.style.display = "block";
-
-	case:
+	break;
+	default:
 	colorDocumento.setAttribute('href', 'style.css');
 	botonRedInactivo.style.display = "block";
 	botonRedActivo.style.display = "none";
@@ -46,7 +46,7 @@ function colorBlue() {
 
 	let hojaEstilo = colorDocumento.getAttribute('href');
 	switch (hojaEstilo) {
-	case 'style.css':
+	case 'styleBlue.css':
 	colorDocumento.setAttribute('href','styleBlue.css');
 	botonBlueInactivo.style.display = "none";
 	botonBlueActivo.style.display = "block";
@@ -102,5 +102,6 @@ function colorYellow() {
 	botonBlueActivo.style.display = "none";
 }
 
-document.queryselector(".colorYellow").addeventlistener("click", colorYellow);
+document.querySelector(".colorYellow").addEventListener("click", colorYellow);
+
 
