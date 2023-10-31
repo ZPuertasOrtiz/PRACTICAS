@@ -105,3 +105,28 @@ function colorYellow() {
 document.querySelector(".colorYellow").addEventListener("click", colorYellow);
 
 
+// Reserva
+
+document.getElementById("reservaForm").addEventListener("submit", function(event) {
+	event.preventDefault(); 
+  
+	// Captura los valores del formulario
+	const nombre = document.getElementById("nombre").value;
+	const fecha = document.getElementById("fecha").value;
+	const hora = document.getElementById("hora").value;
+	const personas = document.getElementById("personas").value;
+  
+	if (nombre && fecha && hora && personas) {
+		
+		const mensaje = `Reserva confirmada para ${nombre}. Fecha: ${fecha}, Hora: ${hora}, Número de personas: ${personas}.`;
+		document.getElementById("popupContent").textContent = mensaje;
+		document.getElementById("popup").style.display = "block";
+	  } else {
+		alert("Por favor, complete todos los campos.");
+	}
+});
+
+document.getElementById("closePopup").addEventListener("click", function() {
+document.getElementById("popup").style.display = "none";
+});
+  
