@@ -2,12 +2,71 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Piedra, pepal o tijera</title>
-    <script src = "Js/codigo.js" ></script>
+    <title>Página Web Responsive</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        #container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .image, .text {
+            display: none;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .button {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    
+    <div id="container">
+        <button class="button" id="showButton1">Tócame u///u</button>
+        <img class="image" id="image1" src="EwerwneWEAAQXDQ.jpg_large" alt="Imagen 1" />
+
+        <button class="button" id="showButton2" style="display: none;">De nuevo 7u7</button>
+        <p class="text" id="text1" style="display: none;">Mentis...</p>
+
+        <button class="button" id="showButton3" style="display: none;">Última :3</button>
+        <img class="image" id="image2" src="flor.jpg" alt="Imagen 2" />
+    </div>
+
+    <script>
+        const showButton1 = document.getElementById('showButton1');
+        const showButton2 = document.getElementById('showButton2');
+        const showButton3 = document.getElementById('showButton3');
+        const image1 = document.getElementById('image1');
+        const image2 = document.getElementById('image2');
+        const text1 = document.getElementById('text1');
+
+        showButton1.addEventListener('click', () => {
+            showButton1.style.display = 'none';
+            image1.style.display = 'block';
+            showButton2.style.display = 'block';
+        });
+
+        showButton2.addEventListener('click', () => {
+            showButton2.style.display = 'none';
+            text1.style.display = 'block';
+            showButton3.style.display = 'block';
+        });
+
+        showButton3.addEventListener('click', () => {
+            showButton3.style.display = 'none';
+            image2.style.display = 'block';
+        });
+    </script>
 </body>
 </html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Web Responsive</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        
+        #container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #image {
+            display: none;
+            max-width: 100%;
+            height: auto;
+        }
+
+        #showButton {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <button id="showButton">Mostrar Imagen</button>
+        <img id="image" src="tu_imagen.jpg" alt="Imagen" />
+    </div>
+
+    <script>
+        const showButton = document.getElementById('showButton');
+        const image = document.getElementById('image');
+
+        showButton.addEventListener('click', () => {
+            image.style.display = 'block';
+        });
+    </script>
+</body>
+</html>
